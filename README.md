@@ -148,9 +148,16 @@ Sub Column()
         ws.Range("P1:Q1").Font.Bold = True
         ws.Range("P1:Q1").HorizontalAlignment = xlCenter
         'Headers for Max and Min
-        ws.Range("O2:O4") = Array("Max % Change", "Least % Change", "Max Volume")
+        'Headers for Max and Min
+        ws.Cells(2, 15).Value = "Max % Change"
+        ws.Cells(3, 15).Value = "Min % Change"
+        ws.Cells(4, 15).Value = "Max Stock Volume"
         ws.Range("O2:O4").Font.Bold = True
         ws.Range("O2:O4").HorizontalAlignment = xlCenter
+        'Set Column Width for Max % Change, Min % Change, Max Stock Volume
+        ws.Columns("A:Q").ColumnWidth = 18
+        'Center Data for All Worksheets
+        ws.Columns("A:Q").HorizontalAlignment = xlCenter
         
         
     Next ws
